@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: black;
+    color:white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(R.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:  wrap;
+}
+
+.contenue{
+    padding: 10px 10%; 
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    transition: 0.5s;
+}
+nav ul li a:hover::after
+{
+    width: 100%;
+}
+
+.title {
+    color:white;
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-img{
+    margin-left: 5px;
+}
+.title span{
+    color: red;
+}
+.title h1{
+    font-size: 30px;
+    margin-top: 20px;
+}
+/*------------------------------A propos----------------------------------------------------------*/
+.propos{
+    padding: 80px 0;
+    color: white;
+}
+.colonne{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+.propos-col1{
+    flex-basis: 35%;
+}
+.propos-col1 img{
+    width: 100%;
+    height: 450px;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+.propos-col2{
+    flex-basis: 60%;
+    font-size: 18px;
+}
+.propos-col2 h1{
+    font-size: 60px;
+    font-weight: 600px;
+}
+.propos-col2 p {
+    margin-top: 15px;
+}
+.title-tab{
+    display: flex;
+    justify-content: space-between;
+} 
+.lientab {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+}
+.lientab::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -8px;
+    background: red;
+    position: absolute;
+    transition: 0.5s;
+}
+.lientab.active::after{
+    width: 50%;
+}
+.infopersonnel ul li span{
+    color: brown;
+    font-size: 15px;
+
+}
+.infopersonnel li {
+    list-style: none;
+    margin: 10px 0;
+}
+.infopersonnel{
+    display: none;
+}
+.infopersonnel.active{
+    display: block;
+}
+/* -------------------- Mes services---------------------------*/
+.listservices{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.listservices div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    border-right: 10px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+/*-------------Contact-------------------*/
+.colonne-1{
+    flex-basis: 35%;
+}
+
+.colonne-2{
+    flex-basis: 60%;
+}
+.colonne-1 p{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.colonne-1 p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.reseausocial{
+    margin-top: 30px;
+}
+.reseausocial a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline inline-block;
+    transition: transform 0.5s;
+}
+.reseausocial a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn{
+    background: #ff004f;
+    border: 1px solid  #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    display: inline-block;
+}
+.colonne-2 form{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: none;
+    outline: 0;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+}
+.copyright i{
+    color: #ff004f;
+}
+/*-----------------------css for small screens--------------------*/
+@media only screen and(max-width: 600px){
+    .title h1{
+        font-size: 5px;
+    }
+    .propos-col2 p{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+}
