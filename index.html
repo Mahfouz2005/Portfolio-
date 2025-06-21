@@ -1,144 +1,94 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PORTFOLIO | Mahfouz</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-      
-    </head>
-    <body>
-        <header>
-            <div id="header">
-                <div class="header-img">
-                    <img src="R.jpg" alt="Portfolio" class="header-image" width="100" height="100">
-                </div>
-                <div class="contenue">
-                    <nav>
-                        <ul >
-                            <li><a href="#Acceuil">Acceuil </a></li>
-                            <li><a href="#Apropos">A propos</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="title">
-                    <p>Web dévellopeur</p>
-                    <h1>Je suis <span>Mahfouz<br></span>dévellopeur web  Béninois </h1>
-                </div>
-            </div>
-        </header>
-<!------------------A propos--------------->
-        <div class="propos">
-            <div class="colonne">
-                <div class="propos-col1">
-                    <img src="imp.jpg">
-                </div>
-                <div class="propos-col2">
-                    <h1 class="titlepropos">A propos de Moi </h1>
-                    <p>Je suis actuellement etudiant en licence 3 en Réseau informatique et Télécommunication 
-                        de HECM Kandi ou j'ai pue avoir les bases du devellopement web avec les langages suivants :
-                        HTML,CSS,JAVASCRIPT et PHP</p>
-                        <div class="title-tab">
-                            <p class="lientab active" onclick="opentab('qualification')">Qualifications</p>
-                            <p class="lientab"onclick="opentab('experiences')">Experiences</p>
-                            <p class="lientab"onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="infopersonnel active" id="qualification">
-                            <ul>
-                                <li><span>UI/UX</span><br>Designeing web/App interface</li>
-                                <li><span>Web devellopement</span><br>Web App devellopement</li>
-                                <li><span>App devellopement</span><br>Building Android/ios apps</li>
-                            </ul>
-                        </div>
-                        <div class="infopersonnel" id="experiences">
-                            <ul>
-                                <li><span>2021-current</span><br>UI/UX Design Training at ET
-                                Institute</li>
-                                <li><span>2019-2021</span><br>Team lead at StarApp LLC.</li>
-                                <li><span>2017-2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
-                                <li><span>2016-2017</span><br>Intership at ekart eCommerce.</li>
-                            </ul>
-                        </div><div class="infopersonnel" id="education">
-                            <ul>
-                                <li><span>2016</span><br>UI/UX Design Training at ET Institute</li>
-                                <li><span>2016</span><br>MBA from MIT Bangalore.</li>
-                                <li><span>2014</span><br>BBA from ISM Bangalore.</li>
-                            </ul>
-                        </div>
-                </div>
-            </div>
-        </div>
-<!---------------------Mes services---------------------------------------------------------------------------------->
-        <div class="messevices">
-            <div class="contenuservices">
-                <h1>Mes Services</h1>
-                <div class="listservices">
-                    <div>
-                        <i class="fas fa-code"></i>
-                        <h1>Web Design</h1>
-                        <p>interface utilisateur pour un site de vente en ligne </p>
-                        <a href="#">Plus</a>
-                    </div>
-                    <div>
-                        <i class="fas fa-crop-alt"></i>
-                        <h1>UI/UX Design</h1>
-                        <p>interface utilisateur pour un site de vente en ligne </p>
-                        <a href="#">Plus</a>
-                    </div><div>
-                        <i class="fab fa-app-store"></i>
-                        <h1>App Design</h1>
-                        <p>interface utilisateur pour un site de vente en ligne </p>
-                        <a href="#">Plus</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!----------------------------Contact------------------------->
-        <div id="contact">
-            <div class="contenucontact">
-                <div class="colonne">
-                    <div class="colonne-1">
-                        <h1 clase="tittlecontact">Contacter moi</h1>
-                        <p><i class="fas fa-paper-plane"></i>contact@exemple.com</p>
-                        <p><i class="fas fa-phone-square-alt"></i>+2290164991803</p>
-                        <div class="reseausocial">
-                            <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
-                            <a href=""><i class="fab fa-twitter-square"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-linkedin"></i></a>
-                        </div>
-                        <a href="CV .pdf"Download class="btn">Download CV</a>
-                    </div>  
-                    <div class="colonne-2">
-                        <form>
-                            <input type="text" name="Name" placeholder="Your name"required>
-                            <input type="text" name="Email" placeholder="Your Email"required>
-                            <textarea  name="Message" rows="6" placeholder="Your message"></textarea>
-                            <button type="submit" class="btn">submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Copyrith@ by Mahfouz<i class="fas fa-heart"></p>
-            </div>
-        </div>
-        <script>
-            let lienstab = document.getElementsByClassName("lientab");
-            let infopersonnels = document.getElementsByClassName("infopersonnel");
-            function opentab(Nomtab){
-                for(lientab of lienstab){
-                    lientab.classList.remove("active");
-                }
-                for(infopersonnel of infopersonnels){
-                    infopersonnel.classList.remove("active");
-                }
-                event.currentTarget.classList.add("active");
-                document.getElementById(Nomtab).classList.add("active");
-            }
-        </script>
-    </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Mahfouz</title>
+    
+    <!-- Lien vers ton fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts : Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Contenu principal ici -->
+    <div id="header">
+        <div class="contenue">
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="title">
+                <h1>Bonjour, je suis <span>Mahfouz</span></h1>
+                <p>Développeur Web</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- À propos -->
+    <section id="apropos" class="propos">
+        <div class="contenue">
+            <div class="colonne">
+                <div class="propos-col1">
+                    <img src="R.jpg" alt="Moi">
+                </div>
+                <div class="propos-col2">
+                    <h1>À propos de moi</h1>
+                    <p>Passionné par le développement web...</p>
+
+                    <div class="title-tab">
+                        <p class="lientab active" onclick="opentab(event, 'info')">Infos personnelles</p>
+                        <p class="lientab" onclick="opentab(event, 'experiences')">Expériences</p>
+                    </div>
+
+                    <div id="info" class="infopersonnel active">
+                        <ul>
+                            <li>Nom : <span>Mahfouz</span></li>
+                            <li>Email : <span>mahfouz@example.com</span></li>
+                        </ul>
+                    </div>
+
+                    <div id="experiences" class="infopersonnel">
+                        <ul>
+                            <li>2023 - Stage chez XYZ</li>
+                            <li>2024 - Freelance développeur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="copyright">
+        <p>Copyright © by Mahfouz <i class="fas fa-heart"></i></p>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        let lienstab = document.getElementsByClassName("lientab");
+        let infopersonnels = document.getElementsByClassName("infopersonnel");
+
+        function opentab(event, Nomtab) {
+            for (let l of lienstab) {
+                l.classList.remove("active");
+            }
+            for (let info of infopersonnels) {
+                info.classList.remove("active");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(Nomtab).classList.add("active");
+        }
+    </script>
+
+ </body>
 </html>
