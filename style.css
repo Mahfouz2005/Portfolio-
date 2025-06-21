@@ -298,11 +298,11 @@ i.fa-phone {
   nav ul {
     display: none;
     flex-direction: column;
-    background-color: #000;
+    background-color: red;
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100%;
+    width: 50%;
     padding: 10px 0;
   }
 
