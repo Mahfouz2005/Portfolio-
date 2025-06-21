@@ -71,6 +71,20 @@ nav ul li a:hover::after {
     font-size: 30px;
     margin-top: 20px;
 }
+/* Style menu mobile */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Menu normal visible sur grand écran */
+nav ul {
+  display: flex;
+  list-style: none;
+}
 
 /*---------------- A propos ----------------*/
 
@@ -284,9 +298,28 @@ form .btn {
   nav ul.active {
     display: flex;
   }
-
-  .menu-icon {
+    .menu-icon {
     display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
   }
 }
 
