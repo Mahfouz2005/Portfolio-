@@ -261,6 +261,46 @@ form .btn {
 .copyright i {
     color: #ff004f;
 }
+/* Menu responsive */
+.menu-icon {
+  display: none;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
 
+/* Navigation mobile */
+@media only screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Icônes sociaux */
+.reseausocial a {
+  text-decoration: none;
+  font-size: 24px;
+  margin: 0 10px;
+  color: #ababab;
+  transition: color 0.3s;
+}
+
+.reseausocial a:hover {
+  color: #ff004f;
+}
 /*---------------- Responsive CSS (petits écrans) ----------------*/
 /* À ajouter si tu veux plus tard */
