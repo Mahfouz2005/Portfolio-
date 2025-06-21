@@ -75,7 +75,7 @@ nav ul li a:hover::after {
 .menu-icon {
   display: none;
   font-size: 28px;
-  color: white;
+  color: red;
   cursor: pointer;
   z-index: 1000;
 }
@@ -283,6 +283,8 @@ i.fa-phone {
   display: none;
   font-size: 25px;
   color: white;
+  background-color:red;
+  margin-left:-20;
   cursor: pointer;
 }
 
@@ -300,6 +302,7 @@ i.fa-phone {
 
   nav ul.active {
     display: flex;
+    margin-left:0;
   }
     .menu-icon {
     display: block;
