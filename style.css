@@ -312,6 +312,9 @@ i.fa-phone {
     margin: 10px 0;
     text-align: center;
   }
+  .propos-col1 img{
+      height:100px;
+  }
 }
 
 /* Icônes sociaux */
