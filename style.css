@@ -275,6 +275,9 @@ form .btn {
 .copyright i {
     color: #ff004f;
 }
+i.fa-phone {
+  color: #ff004f;
+}
 /* Menu responsive */
 .menu-icon {
   display: none;
