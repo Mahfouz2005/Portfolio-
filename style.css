@@ -297,7 +297,7 @@ i.fa-phone {
     display: none;
     flex-direction: column;
     background-color: red;
-    position: absolute;
+    position: fixed;
     top: 60px;
     left: 0;
     width: 50%;
@@ -310,7 +310,6 @@ i.fa-phone {
 
   nav ul li {
     margin: 10px 0;
-    text-align: center;
   }
   .propos-col1 img{
       height:100px;
