@@ -19,14 +19,17 @@
     <!-- Contenu principal ici -->
     <div id="header">
         <div class="contenue">
-            <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#apropos">À propos</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <nav>
+  <div class="menu-icon" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <ul id="nav-ul">
+    <li><a href="#header">Accueil</a></li>
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+        </nav>
             <div class="title">
                 <h1>Bonjour, je suis <span>Mahfouz</span></h1>
                 <p>Développeur Web</p>
@@ -67,10 +70,40 @@
             </div>
         </div>
     </section>
+    <section id="contact" class="propos">
+  <div class="contenue colonne">
+    <div class="colonne-1">
+      <h2>Contacte-moi</h2>
+      <p><i class="fas fa-paper-plane"></i> mahfouz@example.com</p>
+      <div class="reseausocial">
+        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://google.com"><i class="fab fa-google"></i></a>
+        <a href="https://wa.me/229XXXXXXXX"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="colonne-2">
+      <form name="submit-to-google-sheet">
+        <input type="text" name="Nom" placeholder="Ton nom" required>
+        <input type="email" name="Email" placeholder="Ton email" required>
+        <textarea name="Message" rows="6" placeholder="Ton message" required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+      <span id="message-envoye" style="color:lightgreen;"></span>
+    </div>
+  </div>
+    </section>
 
-    <!-- Footer -->
     <div class="copyright">
-        <p>Copyright © by Mahfouz <i class="fas fa-heart"></i></p>
+  <p>© 2025 by Mahfouz <i class="fas fa-heart"></i></p>
+  <div class="reseausocial">
+    <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+    <a href="https://google.com"><i class="fab fa-google"></i></a>
+    <a href="https://wa.me/229XXXXXXXX"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+  </div>
     </div>
 
     <!-- Script JavaScript -->
@@ -89,6 +122,28 @@
             document.getElementById(Nomtab).classList.add("active");
         }
     </script>
+<script>
+  // Menu responsive
+  function toggleMenu() {
+    document.getElementById("nav-ul").classList.toggle("active");
+  }
 
- </body>
-</html>
+  // Google Sheets form
+  const scriptURL = 'https://script.google.com/macros/s/TON_SCRIPT_ID/exec'; // à remplacer
+  const form = document.forms['submit-to-google-sheet'];
+  const msg = document.getElementById("message-envoye");
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message envoyé avec succès ✔";
+        setTimeout(() => msg.innerHTML = "", 5000);
+        form.reset();
+      })
+      .catch(error => {
+        msg.innerHTML = "Une erreur est survenue ❌";
+      });
+  });
+   </script>
+</body></html>
