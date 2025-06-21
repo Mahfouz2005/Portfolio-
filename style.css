@@ -1,4 +1,4 @@
-* {
+I'm* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -292,8 +292,8 @@ i.fa-phone {
 @media only screen and (max-width: 768px) {
   nav ul {
     display: none;
-    flex-direction: column;
-    background: #000;
+    flex-direction: row ;
+    background: red;
     width: 100%;
     position: absolute;
     top: 60px;
