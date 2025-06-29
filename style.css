@@ -305,8 +305,8 @@ i.fa-phone {
     position: fixed;
     top: 60px;
     left: 0;
-    height: auto;
-    width: 60%;
+    height: 100 %;
+    width: 40%;
     padding: 20px;
     border-radius: 0 10px 10px 0;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
