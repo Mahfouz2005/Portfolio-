@@ -134,6 +134,9 @@
         document.getElementById('message-envoye').innerHTML = "Message envoyé avec succès !";
         form.reset();
       })
+        setTimeout(() => {
+          messageElement.innerHTML = "";
+        }, 4000);
       .catch(error => {
         document.getElementById('message-envoye').innerHTML = "Erreur lors de l'envoi !";
         console.error('Error!', error.message);
