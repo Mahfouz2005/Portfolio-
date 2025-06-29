@@ -123,15 +123,22 @@
     document.getElementById("nav-ul").classList.toggle("active");
   }
 </script>
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbz2B2oaaeZSpwBZ9OSxVxBOgP-1GEdwN8Okwq7Z-mKDz2yHf4--NjhKZR27j3aqBAxQ/exec'
-  const form = document.forms['submit-to-google-sheet']
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby14_Iv6wGwv60V0ZeeYIFsBBtdIS4BmUU-DSw8Urk-bEMzOSML-OITYdflI6LgyiS1/exec';
+  const form = document.forms['submit-to-google-sheet'];
 
   form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        document.getElementById('message-envoye').innerHTML = "Message envoyé avec succès !";
+        form.reset();
+      })
+      .catch(error => {
+        document.getElementById('message-envoye').innerHTML = "Erreur lors de l'envoi !";
+        console.error('Error!', error.message);
+      });
+  });
 </script>
+
 </body></html>
