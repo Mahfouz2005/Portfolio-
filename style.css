@@ -301,11 +301,11 @@ i.fa-phone {
   nav ul {
     display: none;
     flex-direction: column;
-    background-color: red;
+    background-color: black;
     position: fixed;
     top: 60px;
     left: 0;
-    height: 100 %;
+    height: 100%;
     width: 40%;
     padding: 20px;
     border-radius: 0 10px 10px 0;
