@@ -123,20 +123,36 @@
     document.getElementById("nav-ul").classList.toggle("active");
   }
 </script>
-    <script>
+  <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycby14_Iv6wGwv60V0ZeeYIFsBBtdIS4BmUU-DSw8Urk-bEMzOSML-OITYdflI6LgyiS1/exec';
   const form = document.forms['submit-to-google-sheet'];
+  const messageElement = document.getElementById('message-envoye');
 
   form.addEventListener('submit', e => {
     e.preventDefault();
+    
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
       .then(response => {
-        document.getElementById('message-envoye').innerHTML = "Message envoyé avec succès !";
+        messageElement.innerHTML = "Message envoyé avec succès !";
+        messageElement.style.color = "lightgreen";
         form.reset();
+
+        // Faire disparaître le message après 4 secondes
         setTimeout(() => {
-        messageElement.innerHTML = "";
+          messageElement.innerHTML = "";
         }, 4000);
       })
+      .catch(error => {
+        messageElement.innerHTML = "Erreur lors de l'envoi !";
+        messageElement.style.color = "red";
+
+        // Faire disparaître l'erreur après 4 secondes aussi
+        setTimeout(() => {
+          messageElement.innerHTML = "";
+        }, 4000);
+      });
+  });
+</script>
 
       .catch(error => {
         document.getElementById('message-envoye').innerHTML = "Erreur lors de l'envoi !";
