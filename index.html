@@ -120,16 +120,18 @@
     </script>
 <script>
   // Menu responsive
-  function toggleMenu() {
+ function toggleMenu() {
     document.getElementById("nav-ul").classList.toggle("active");
-          // Fermer le menu après un clic sur un lien
-  const navLinks = document.querySelectorAll('#nav-ul li a');
-  navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-  document.getElementById("nav-ul").classList.remove("active");
   }
+  // Fermer le menu après un clic sur un lien (événement ajouté une seule fois)
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('#nav-ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById("nav-ul").classList.remove("active");
+      });
     });
-  }
+  });  
 </script>
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycby14_Iv6wGwv60V0ZeeYIFsBBtdIS4BmUU-DSw8Urk-bEMzOSML-OITYdflI6LgyiS1/exec';
