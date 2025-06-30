@@ -283,13 +283,6 @@ form .btn {
 i.fa-phone {
   color: #ff004f;
 }
-/* Menu responsive */
-.menu-icon {
-  display: none;
-  font-size: 25px;
-  color: white;
-  cursor: pointer;
-}
 
 /* Navigation mobile */
 @media only screen and (max-width: 768px) {
