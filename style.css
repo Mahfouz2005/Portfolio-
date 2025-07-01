@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+html {
+    scroll-behavior: smooth; /* Rend le défilement fluide lors des ancres de navigation */
+}
 body {
     background-color: black;
     color: white;
