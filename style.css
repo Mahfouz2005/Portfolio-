@@ -25,13 +25,13 @@ body {
 
 .contenue {
     padding: 10px 10%;
+    position:fixed;
 }
 
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin-rights: 20px;
-    position:fixed;
+    margin-rights: 10px 20px;
 }
 
 nav ul li a {
