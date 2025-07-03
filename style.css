@@ -30,7 +30,7 @@ body {
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin-rights: 20px;
     position:fixed;
 }
 
