@@ -21,6 +21,10 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    disposition:flex;
+    z-index:1000;
+    top:0;
+    width:100%;
 }
 
 .contenue {
