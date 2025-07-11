@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    disposition:flex;
+    position:flex;
     z-index:1000;
     top:0;
     width:100%;
