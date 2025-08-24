@@ -26,9 +26,7 @@ body {
 .contenue {
     padding: 10px 10%;
 }
-.nav {
-    margin-right : 50%;
-}
+
 nav ul li  {
     display: inline-block;
     list-style: none;
