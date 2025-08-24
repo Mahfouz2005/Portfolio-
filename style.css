@@ -26,11 +26,13 @@ body {
 .contenue {
     padding: 10px 10%;
 }
+.nav-ul {
+    margin-right : 10%;
+}
 nav ul li  {
     display: inline-block;
     list-style: none;
     margin: 20px 10px;
-    margin-right :10%;
 }
 
 nav ul li a {
