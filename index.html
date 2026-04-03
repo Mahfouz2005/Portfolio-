@@ -2,178 +2,305 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Mahfouz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Portfolio Mahfouz - Développeur Web & Mobile</title>
     
-    <!-- Lien vers ton fichier CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Google Fonts : Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome pour les icônes -->
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+
 </head>
 <body>
-    
-    <!-- Contenu principal ici -->
-    <div id="header">
-        <div class="contenue">
+
+<div id="header">
+    <div class="contenue">
         <nav>
-  <div class="menu-icon" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-  </div>
-  <ul id="nav-ul">
-    <li><a href="#header" >Accueil</a></li>
-    <li><a href="#apropos">À propos</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="nav-ul">
+                <li><a href="#header">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-            <div class="title">
-                <h1>Bonjour, je suis <span>Mahfouz</span></h1>
-                <p>Développeur Web</p>
-            </div>
+        <div class="title">
+            <h1>Bonjour, je suis <span>Mahfouz</span></h1>
+            <p>Développeur Web & Mobile | Créateur de solutions innovantes</p>
         </div>
     </div>
+</div>
 
-    <!-- À propos -->
-    <section id="apropos" class="propos">
-        <div class="contenue">
-            <div class="colonne">
-                <div class="propos-col1">
-                    <img src="img2.jpg" alt="Moi">
+<!-- À propos -->
+<section id="apropos" class="propos">
+    <div class="contenue">
+        <div class="colonne">
+            <div class="propos-col1">
+                <img src="R2.jpg" alt="Photo Mahfouz">
+            </div>
+            <div class="propos-col2">
+                <h1>À propos de moi</h1>
+                <p>Développeur passionné par la création d'applications mobiles et web. J'aime transformer des idées en produits fonctionnels, du quiz éducatif à la gestion immobilière. Autodidacte et persévérant, je cherche toujours à apprendre de nouvelles technologies.</p>
+                <div class="title-tab">
+                    <p class="lientab active" onclick="opentab(event, 'info')">Infos personnelles</p>
+                    <p class="lientab" onclick="opentab(event, 'experiences')">Expériences</p>
                 </div>
-                <div class="propos-col2">
-                    <h1>À propos de moi</h1>
-                    <p>Passionné par le développement web...</p>
-
-                    <div class="title-tab">
-                        <p class="lientab active" onclick="opentab(event, 'info')">Infos personnelles</p>
-                        <p class="lientab" onclick="opentab(event, 'experiences')">Expériences</p>
-                    </div>
-
-                    <div id="info" class="infopersonnel active">
-                        <ul>
-                            <li>Nom : <span>SALIFOU</span></li>
-                            <li>Prénom : <span>Mahfouz</span></li>
-                            <li>Ville : <span>Kandi</span></li>
-                        </ul>
-                    </div>
-
-                    <div id="experiences" class="infopersonnel">
-                        <ul>
-                            <li>2024 - Stage chez PREMIUM COMPAGNY BENIN</li>
-                            <li>2025 - Stage chez Beta2-Afrique-Technologies </li>
-                        </ul>
-                    </div>
+                <div id="info" class="infopersonnel active">
+                    <ul>
+                        <li>Nom : <span>SALIFOU Mahfouz</span></li>
+                        <li>Ville : <span>Kandi, Bénin</span></li>
+                        <li>Email : <span>mahfouzsalifou01@gmail.com</span></li>
+                    </ul>
+                </div>
+                <div id="experiences" class="infopersonnel">
+                    <ul>
+                        <li>2024 - Stage PREMIUM COMPAGNY BENIN</li>
+                        <li>2025 - Stage Beta2-Afrique-Technologies</li>
+                        <li>Création d'applications mobiles (Quiz) et web (Mise en ligne des templates, CV en ligne)</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-    <section id="contact" class="propos">
-  <div class="contenue colonne">
-    <div class="colonne-1">
-      <h2>Contactez - moi</h2>
-      <p><i class="fas fa-paper-plane"></i> tomj86980@gmail.com</p>
-      <p><i class="fas fa-phone"></i>+229 0164991803</p>
-        <a href="cvligne.pdf" class="btn" download >Mon cv</a>
     </div>
-    <div class="colonne-2">
-      <form name="submit-to-google-sheet" method="POST">
-        <input type="text" name="Nom" placeholder="Ton nom" required>
-        <input type="email" name="Email" placeholder="Ton email" required>
-        <textarea name="Message" rows="6" placeholder="Ton message" required></textarea>
-        <button type="submit" class="btn">Envoyer</button>
-      </form>
-      <span id="message-envoye" style="color:lightgreen;"></span>
-    </div>
-  </div>
-    </section>
+</section>
 
-    <div class="copyright">
-  <p>© 2025 by Mahfouz <i class="fas fa-heart"></i></p>
-  <div class="reseausocial">
-    <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-    <a href="https://google.com"><i class="fab fa-google"></i></a>
-    <a href="https://wa.me/2290164991803"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
-  </div>
+<!-- SECTION PROJETS (3 projets réels) -->
+<section id="projets" class="projets">
+    <div class="contenue">
+        <h2 class="section-title">Mes <span>Projets</span> Réalisés</h2>
+        <div class="projets-grid">
+            <!-- Projet 1 : Application mobile Quiz -->
+            <div class="projet-card">
+                <div class="projet-img">
+                    <img src="quiz.jpg" alt="Application Quiz Mobile">
+                </div>
+                <div class="projet-info">
+                    <h3>Quiz Challenge Mobile</h3>
+                    <p>Application mobile de quiz avec questions intégrées directement dans le code. Authentification Firebase, session limitée à 1 minute. À la fin, affichage : identifiant utilisateur, score obtenu, meilleur score et mention (selon moyenne).</p>
+                    <div class="tech-stack">
+                        <span>Flutter</span><span>Firebase Auth</span><span>Firestore</span>
+                    </div>
+                    <a href="https://github.com/Mahfouz2005/Quiz_app_flutter.git" class="btn-projet"><i class="fab fa-github"></i> Code source privé</a>
+                </div>
+            </div>
+            <!-- Projet 2 : Gestion immobilière (PHP / InfinityFree) -->
+            <div class="projet-card">
+                <div class="projet-img">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gestion immobilière">
+                </div>
+                <div class="projet-info">
+                    <h3>Mise en ligne des templates</h3>
+                    <p>Application web développée avec base de données MySQL,le framework laravel. Elle permet de partager des templates en version gratuit au payant : ajout, modification, suppression. Fonctionnalités de recherche par critères (technologies, type d'application,type payant ou gratuit ).Surtout avec laravel breez pour la partie authentification, du bootstrap et javascript.Aussi chaque utilisateur dispose d'un espace personnel concernant ses templates partager. Le code source reste disponible.</p>
+                    <div class="tech-stack">
+                        <span>laravel</span><span>MySQL</span><span>HTML/CSS</span><span>Bootstrap</span><span>JavaScript</span>
+                    </div>
+                    <a href="https://github.com/Mahfouz2005/Plateforme.git" class="btn-projet"><i class="fab fa-github"></i> Voir sur GitHub</a>
+                </div>
+            </div>
+            <!-- Projet 3 : CV en ligne (HTML/CSS/JS) -->
+            <div class="projet-card">
+                <div class="projet-img">
+                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="CV en ligne">
+                </div>
+                <div class="projet-info">
+                    <h3>CV en ligne</h3>
+                    <p>Portfolio / CV entièrement statique réalisé avec HTML, CSS et JavaScript. Aucun backend, hébergé sur GitHub Pages. Présentation des compétences, expériences et formulaire de contact fonctionnel.</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span>
+                    </div>
+                    <a href="https://github.com/Mahfouz2005/cv-public.git" class="btn-projet"><i class="fab fa-github"></i> Dépôt GitHub</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <span id="message-envoye" style="color:lightgreen;"></span>
-    <!-- Script JavaScript -->
-    <script>
-        let lienstab = document.getElementsByClassName("lientab");
-        let infopersonnels = document.getElementsByClassName("infopersonnel");
+</section>
 
-        function opentab(event, Nomtab) {
-            for (let l of lienstab) {
-                l.classList.remove("active");
-            }
-            for (let info of infopersonnels) {
-                info.classList.remove("active");
-            }
-            event.currentTarget.classList.add("active");
-            document.getElementById(Nomtab).classList.add("active");
-        }
-    </script>
+<!-- Contact -->
+<section id="contact" class="propos">
+    <div class="contenue colonne">
+        <div class="colonne-1">
+            <h2>Contactez - moi</h2>
+            <p><i class="fas fa-paper-plane"></i> mahfouzsalifou01@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i> +229 0164991803</p>
+            <a href="cvligne.pdf" class="btn" download>Télécharger mon CV</a>
+        </div>
+        <div class="colonne-2">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Nom" placeholder="Ton nom" required>
+                <input type="email" name="Email" placeholder="Ton email" required>
+                <textarea name="Message" rows="6" placeholder="Ton message" required></textarea>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+            <span id="message-envoye" style="color:lightgreen; display:block; margin-top:10px;"></span>
+        </div>
+    </div>
+</section>
+
+<div class="copyright">
+    <p>© 2025 par Mahfouz — <i class="fas fa-heart"></i> Code & créativité</p>
+    <div class="reseausocial">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="https://wa.me/2290164991803"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>
+
+<!-- CHATBOT (connaissance des 3 projets) -->
+<div class="chatbot-container">
+    <div class="chat-toggle" onclick="toggleChat()">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    <div id="chatWindow" class="chat-window hidden">
+        <div class="chat-header">
+            <span><i class="fas fa-robot"></i> Assistant Projets</span>
+            <i class="fas fa-times" onclick="toggleChat()"></i>
+        </div>
+        <div id="chatMessages" class="chat-messages">
+            <div class="message bot-message">🤖 Bonjour ! Je suis l'assistant de Mahfouz. Demandez-moi tout sur ses projets : l'application Quiz mobile, Mise en ligne des templates ou le CV en ligne. Par exemple : "Comment fonctionne le quiz ?" ou "Quelles technologies pour cv en ligne ?"</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Posez votre question...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
+
 <script>
-  // Menu responsive
- function toggleMenu() {
-    document.getElementById("nav-ul").classList.toggle("active");
-  }
-  // Fermer le menu après un clic sur un lien (événement ajouté une seule fois)
-  document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('#nav-ul li a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById("nav-ul").classList.remove("active");
-      });
+    // Menu responsive
+    function toggleMenu() {
+        document.getElementById("nav-ul").classList.toggle("active");
+    }
+    document.querySelectorAll('#nav-ul li a').forEach(link => {
+        link.addEventListener('click', () => document.getElementById("nav-ul").classList.remove("active"));
     });
-  });  
-</script>
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycby14_Iv6wGwv60V0ZeeYIFsBBtdIS4BmUU-DSw8Urk-bEMzOSML-OITYdflI6LgyiS1/exec';
-  const form = document.forms['submit-to-google-sheet'];
-  const messageElement = document.getElementById('message-envoye');
-  const submitButton = form.querySelector('button[type="submit"]');
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
+    // Onglets À propos
+    function opentab(event, tabName) {
+        document.querySelectorAll('.lientab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.infopersonnel').forEach(i => i.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+        document.getElementById(tabName).classList.add('active');
+    }
 
-    // Désactiver le bouton pendant l'envoi
-    submitButton.disabled = true;
-    submitButton.textContent = "Envoi en cours...";
+    // Formulaire Google Sheets (conservez votre script URL)
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby14_Iv6wGwv60V0ZeeYIFsBBtdIS4BmUU-DSw8Urk-bEMzOSML-OITYdflI6LgyiS1/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msgSpan = document.getElementById('message-envoye');
+    if (form) {
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const original = btn.innerText;
+            btn.disabled = true;
+            btn.innerText = "Envoi...";
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(() => {
+                    msgSpan.innerHTML = "✅ Message envoyé !";
+                    form.reset();
+                    setTimeout(() => msgSpan.innerHTML = "", 4000);
+                    btn.disabled = false;
+                    btn.innerText = original;
+                })
+                .catch(() => {
+                    msgSpan.innerHTML = "❌ Erreur d'envoi.";
+                    setTimeout(() => msgSpan.innerHTML = "", 4000);
+                    btn.disabled = false;
+                    btn.innerText = original;
+                });
+        });
+    }
 
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => {
-        messageElement.innerHTML = "Message envoyé avec succès !";
-        messageElement.style.color = "lightgreen";
-        form.reset();
+    // ========== CHATBOT AVEC BASE DE CONNAISSANCES ==========
+    const projetsData = [
+        {
+            titre: "Quiz Challenge Mobile",
+            description: "Application mobile Android de quiz. Les questions sont codées en dur dans l'application. Firebase gère l'authentification des utilisateurs. Chaque session de quiz dure exactement 1 minute (timer). À la fin, l'application affiche : l'identifiant de l'utilisateur, son score obtenu, le meilleur score jamais enregistré pour cet utilisateur, et une mention (ex: Insuffisant, Passable, Bien, Très bien) calculée selon la moyenne des bonnes réponses.",
+            technologies: "flutter, Firebase Authentication, Firebase Firestore",
+            fonctionnalites: "Authentification, timer 60s, calcul du score, sauvegarde du meilleur score, mention personnalisée."
+        },
+        {
+            titre: "Mise en ligne des templates",
+            description: "Application web développée avec base de données MySQL,le framework laravel. Elle permet de partager des templates en version gratuit au payant : ajout, modification, suppression. Fonctionnalités de recherche par critères (technologies, type d'application,type payant ou gratuit ).Surtout avec laravel breez pour la partie authentification, du bootstrap et javascript.Aussi chaque utilisateur dispose d'un espace personnel concernant ses templates partager. Le code source reste disponible.",
+            technologies: "laravel,laravel breez, MySQL, HTML/CSS, Bootstrap, JavaScript",
+            fonctionnalites: "CRUD biens, recherche avancée, filtres de disponibilité, interface responsive."
+        },
+        {
+            titre: "CV en ligne",
+            description: "Portfolio statique (sans backend) réalisé uniquement avec HTML, CSS,PHP et JavaScript. Présente les informations personnelles, les compétences, l'expérience, les projets et un formulaire de contact .",
+            technologies: "HTML5, CSS3, JavaScript, PHP",
+            fonctionnalites: "Design responsive, téléchargement de CV PDF."
+        }
+    ];
 
-        // Réactiver le bouton
-        submitButton.disabled = false;
-        submitButton.textContent = "Envoyer";
+    function getBotAnswer(question) {
+        const q = question.toLowerCase();
+        // Détection de la liste des projets
+        if (q.includes("projet") && (q.includes("liste") || q.includes("quels") || q.includes("vos projets") || q.includes("les projets"))) {
+            let liste = projetsData.map(p => `• ${p.titre}`).join("\n");
+            return `📁 Voici les projets de Mahfouz :\n${liste}\n\nPosez-moi des questions sur l'un d'eux (technologies, description, fonctionnalités).`;
+        }
+        // Recherche quel projet est mentionné
+        let projet = null;
+        for (let p of projetsData) {
+            if (q.includes(p.titre.toLowerCase()) ||
+                (p.titre.includes("Quiz") && (q.includes("quiz") || q.includes("mobile") || q.includes("question"))) ||
+                (p.titre.includes("Mise en ligne des templates") && (q.includes("template") || q.includes("partager"))) ||
+                (p.titre.includes("CV") && (q.includes("cv") || q.includes("curriculum") || q.includes("portfolio")))
+            ) {
+                projet = p;
+                break;
+            }
+        }
+        if (projet) {
+            if (q.includes("techno") || q.includes("technologies") || q.includes("stack") || q.includes("langage")) {
+                return `🔧 Technologies pour "${projet.titre}" : ${projet.technologies}.`;
+            } else if (q.includes("fonction") || q.includes("fonctionnalités") || q.includes("comment ça marche")) {
+                return `⚙️ Fonctionnalités : ${projet.fonctionnalites}`;
+            } else if (q.includes("description") || q.includes("c'est quoi") || q.includes("explique")) {
+                return `📄 ${projet.description}`;
+            } else {
+                return `ℹ️ ${projet.titre} : ${projet.description}\nTechnologies : ${projet.technologies}\nFonctionnalités : ${projet.fonctionnalites}`;
+            }
+        }
+        // Réponse par défaut
+        return "🤔 Je peux vous parler du Quiz mobile (Firebase, timer 1min, score/mention), de Mise en ligne des templates (laravel/MySQL) ou du CV en ligne (HTML/CSS/JS/PHP). Posez une question précise !";
+    }
 
-        // Effacer le message après 4 secondes
+    // Gestion UI Chatbot
+    const chatWindow = document.getElementById('chatWindow');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    
+    function toggleChat() {
+        chatWindow.classList.toggle('hidden');
+        if (!chatWindow.classList.contains('hidden')) chatInput.focus();
+    }
+    
+    function addMessage(text, isUser) {
+        const msgDiv = document.createElement('div');
+        msgDiv.classList.add('message', isUser ? 'user-message' : 'bot-message');
+        msgDiv.innerHTML = isUser ? text : text.replace(/\n/g, '<br>');
+        chatMessages.appendChild(msgDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    function sendMessage() {
+        const userMsg = chatInput.value.trim();
+        if (!userMsg) return;
+        addMessage(userMsg, true);
+        chatInput.value = "";
         setTimeout(() => {
-          messageElement.innerHTML = "";
-        }, 4000);
-      })
-      .catch(error => {
-        messageElement.innerHTML = "Erreur lors de l'envoi !";
-        messageElement.style.color = "red";
-
-        // Réactiver le bouton
-        submitButton.disabled = false;
-        submitButton.textContent = "Envoyer";
-
-        // Effacer le message après 4 secondes
-        setTimeout(() => {
-          messageElement.innerHTML = "";
-        }, 4000);
-      });
-  });
+            const reply = getBotAnswer(userMsg);
+            addMessage(reply, false);
+        }, 400);
+    }
+    
+    chatInput.addEventListener("keypress", (e) => { if (e.key === "Enter") sendMessage(); });
 </script>
-
-</body></html>
+</body>
+</html>
